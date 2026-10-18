@@ -1,3 +1,6 @@
 .DS_Store
 .firebase
 *.log
+
+# Hero has no open licence (all rights reserved): keep the file local, not in git
+assets/fonts/Hero.otf

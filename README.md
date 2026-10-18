@@ -9,7 +9,7 @@ These assets are **not open source**. Anyone may use the unmodified logo files t
 - `index.html`, `ar/index.html`: the pages (hand-edited; keep the two in step).
 - `assets/logos`, `assets/icons`, `assets/patterns`: the SVG files, from the Cave design system artifact's asset store.
 - `assets/css`: `tokens.css` and `components.css` are copies of the design system's generated files; `brand.css` and `fonts.css` are this site's own.
-- `assets/fonts`: Poppins, Almarai and Hero, used only to draw this site. Fonts are not offered for download here: Poppins and Almarai are open fonts (Google Fonts), and Hero and Blue Ocean are licensed to Cave and not distributed.
+- `assets/fonts`: Poppins and Almarai (SIL OFL), plus Hero, used only to draw this site. `Hero.otf` is **not in git** (the file says "All rights reserved" and has no licence): copy it into `assets/fonts/` locally before deploying to get Hero headings; without it the headings fall back to Poppins. Fonts are not offered for download here: Poppins and Almarai are open fonts (Google Fonts), and Hero and Blue Ocean are licensed to Cave and not distributed.
 - `kit/cave-brand-kit.zip`: logos, icons, patterns and `LICENSE.txt`. Rebuild it when an asset changes (zip the three asset folders plus the licence text into `cave-brand-kit/`).
 
 ## Not included on purpose
