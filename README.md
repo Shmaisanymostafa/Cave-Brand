@@ -18,4 +18,8 @@ The letterhead images (they still print the old support address, reprint first),
 
 ## Deploying
 
-A Firebase Hosting site is needed (no project yet). Then `firebase use --add`, `firebase deploy --only hosting --account shmaisanimostafa@gmail.com`, and add the domain `brand.cave.technology`. `firebase.json` serves this folder as it is.
+The Firebase project is `cave-brand-kit` (Hosting site `cave-brand-kit`, default URL https://cave-brand-kit.web.app); `.firebaserc` points at it. It belongs to the shmaisanimostafa@gmail.com account, so pass that account:
+
+`firebase deploy --only hosting --account shmaisanimostafa@gmail.com`
+
+Then add the custom domain `brand.cave.technology` in the Hosting console and set the DNS records it shows. `firebase.json` serves this folder as it is.
