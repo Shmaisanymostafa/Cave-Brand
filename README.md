@@ -2,6 +2,8 @@
 
 The Cave brand site: the logo, symbol, icons, patterns and colours, with the rules for using them, in English (`/`) and Arabic (`/ar/`). Plain static files, no build step and no code to publish.
 
+The navigation's theme icon opens System, Light, Dark and Black choices in both languages. The choice is saved as `cave-brand-theme` in local storage and shared across this site's language pages and tabs. System follows device changes; blocked storage still allows switching for the current page. `assets/js/theme.js` also applies the saved choice before styles load, including on the 404 page.
+
 These assets are **not open source**. Anyone may use the unmodified logo files to refer to Cave; anything else needs written permission (see the Licence section of the page and `kit/` > `LICENSE.txt` inside the zip). The code of the design system is separate and open source: https://design.cave.technology.
 
 ## Contents
@@ -23,3 +25,10 @@ The Firebase project is `cave-brand-kit` (Hosting site `cave-brand-kit`, default
 `firebase deploy --only hosting --account shmaisanimostafa@gmail.com`
 
 Then add the custom domain `brand.cave.technology` in the Hosting console and set the DNS records it shows. `firebase.json` serves this folder as it is.
+
+## Unreleased local tools
+
+The current working copy adds per-logo approved background previews, transparent
+1600px PNG export using the original SVG, and copy-color controls with a manual
+fallback. PNG export preserves the original proportions and does not include the
+preview background. Asset terms are unchanged. Nothing from this work is deployed.

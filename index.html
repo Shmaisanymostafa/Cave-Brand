@@ -13,18 +13,31 @@
 <meta property="og:description" content="The Cave logo, symbol, icons, patterns and colours, with the rules for using them, in English and Arabic.">
 <meta name="theme-color" content="#182643">
 <link rel="icon" type="image/svg+xml" href="/assets/logos/cave-symbol-color.svg">
-<script>(function(){try{var t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';document.documentElement.setAttribute('data-theme',t)}catch(e){}})()</script>
+<script src="/assets/js/theme.js?v=2"></script>
 <link rel="stylesheet" href="/assets/css/fonts.css">
 <link rel="stylesheet" href="/assets/css/tokens.css">
 <link rel="stylesheet" href="/assets/css/components.css">
 <link rel="stylesheet" href="/assets/css/brand.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <header class="top"><div class="wrap">
 <a class="brand" href="/"><img class="logo-light" src="/assets/logos/cave-symbol-color.svg" alt=""><img class="logo-dark" src="/assets/logos/cave-symbol-white.svg" alt=""><span>Cave brand</span></a>
-<nav class="nav" aria-label="Cave brand"><a href="#logos">Logos</a><a href="#rules">Rules</a><a href="#name">Name</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#patterns">Patterns and icons</a><a href="#licence">Licence</a><a class="lang" href="/ar/" hreflang="ar" lang="ar">العربية</a></nav>
+<nav class="nav" aria-label="Cave brand"><a href="#logos">Logos</a><a href="#rules">Rules</a><a href="#name">Name</a><a href="#colour">Colour</a><a href="#type">Type</a><a href="#patterns">Patterns and icons</a><a href="#licence">Licence</a><a class="lang" href="/ar/" hreflang="ar" lang="ar">العربية</a><div class="theme-picker" id="theme-picker" data-label="Theme" hidden>
+<button class="theme-button" id="theme-button" type="button" aria-label="Theme" aria-expanded="false" aria-controls="theme-options">
+<svg data-mode="system" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M8 21h8m-4-5v5"/></svg>
+<svg data-mode="light" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+<svg data-mode="dark" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg>
+<svg data-mode="black" viewBox="0 0 24 24" aria-hidden="true" focusable="false" hidden><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg>
+</button>
+<div class="theme-options" id="theme-options" role="group" aria-label="Theme" hidden>
+<label><input type="radio" name="theme" value="system" data-label="System" checked>System</label>
+<label><input type="radio" name="theme" value="light" data-label="Light">Light</label>
+<label><input type="radio" name="theme" value="dark" data-label="Dark">Dark</label>
+<label><input type="radio" name="theme" value="black" data-label="Black">Black</label>
+</div></div></nav>
 </div></header>
-<main class="wrap">
+<main class="wrap" id="main">
 <div class="hero"><h1>Cave brand</h1><p>The Cave logo, symbol, colours and the rules for using them. Files here are for referring to Cave. Software for building interfaces is on the design system site.</p>
 <div class="actions"><a class="cv-btn cv-btn--primary cv-btn--lg" href="/kit/cave-brand-kit.zip" download>Download the brand kit</a><a class="cv-btn cv-btn--secondary cv-btn--lg" href="https://design.cave.technology/">Design system</a></div></div>
 <section id="logos"><h2>Logos</h2><p class="lead">Use the files as supplied. Full colour goes on white or paper. The white reversal goes on teal, navy or charcoal. Use the Arabic lockup on Arabic surfaces and the English one on English surfaces.</p><ul class="grounds"><li class="ground g-white"><img src="/assets/logos/cave-logo-en-color-compact.svg" alt="English, full colour" height="120"><small>English, full colour</small><a href="/assets/logos/cave-logo-en-color-compact.svg" download>Download SVG</a></li><li class="ground g-navy"><img src="/assets/logos/cave-logo-en-white-compact.svg" alt="English, white" height="120"><small>English, white</small><a href="/assets/logos/cave-logo-en-white-compact.svg" download>Download SVG</a></li><li class="ground g-paper"><img src="/assets/logos/cave-logo-ar-color-compact.svg" alt="Arabic, full colour" height="120"><small>Arabic, full colour</small><a href="/assets/logos/cave-logo-ar-color-compact.svg" download>Download SVG</a></li><li class="ground g-charcoal"><img src="/assets/logos/cave-logo-ar-white-compact.svg" alt="Arabic, white" height="120"><small>Arabic, white</small><a href="/assets/logos/cave-logo-ar-white-compact.svg" download>Download SVG</a></li><li class="ground g-white"><img src="/assets/logos/cave-symbol-color.svg" alt="Symbol, full colour" height="120"><small>Symbol, full colour</small><a href="/assets/logos/cave-symbol-color.svg" download>Download SVG</a></li><li class="ground g-teal"><img src="/assets/logos/cave-symbol-white.svg" alt="Symbol, white" height="120"><small>Symbol, white</small><a href="/assets/logos/cave-symbol-white.svg" download>Download SVG</a></li></ul></section>
@@ -41,5 +54,6 @@
 <p class="cv-footer__copy">© 2026 Cave. All rights reserved.</p>
 <ul class="cv-footer__links"><li><a href="https://www.cave.technology">Cave</a></li><li><a href="https://shops.cave.technology">Cave Shops</a></li><li><a href="https://pos.cave.technology">Cave POS</a></li><li><a href="https://design.cave.technology">Design system</a></li></ul>
 </div></footer>
+<script src="/assets/js/brand-tools.js" defer></script>
 </body>
 </html>
