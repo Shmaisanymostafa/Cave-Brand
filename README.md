@@ -46,7 +46,7 @@ The site is plain static files: no dependency installation or build step is requ
 python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Open `http://127.0.0.1:8080/` for English or `http://127.0.0.1:8080/ar/` for Arabic. Run the server from the repository root so asset URLs resolve correctly.
+Open `http://127.0.0.1:8080/` for English or `http://127.0.0.1:8080/ar/` for Arabic (in production the Arabic page is `/ar`, without a trailing slash). Run the server from the repository root so asset URLs resolve correctly.
 
 ## Usage and licensing
 
@@ -67,7 +67,8 @@ Poppins and Almarai retain their SIL OFL terms. Hero and Blue Ocean are licensed
 | --- | --- |
 | `index.html` · `ar/index.html` | Hand-edited pages; keep both languages in step |
 | `assets/logos/` · `assets/icons/` · `assets/patterns/` | Original SVG artwork |
-| `assets/css/tokens.css` · `assets/css/components.css` | Copies of generated design-system styles |
+| `assets/css/tokens.css` · `assets/css/components.css` | Copies of design-system output (`tokens.json` and `source/components/bundle.css`); refresh with `node scripts/sync-from-design.mjs`, verify with `--check` |
+| `scripts/` | Maintainer tools; excluded from hosting |
 | `assets/css/brand.css` · `assets/css/fonts.css` | Brand-site styling and typography |
 | `assets/js/` | Theme selection and brand tools |
 | `kit/cave-brand-kit.zip` | Downloadable assets with `LICENSE.txt` |
@@ -82,11 +83,11 @@ Committed site tools provide approved background previews, transparent 1600px PN
 
 Keep the supplied SVGs unchanged. When an authorized asset changes, rebuild the kit with the three asset folders and its existing licence text inside `cave-brand-kit/`. Fonts are not offered as part of the kit.
 
-`Hero.otf` is intentionally absent from Git because no redistribution licence is provided; headings fall back to Poppins. Only use a separately licensed local copy when authorized. The old letterhead images and presentation PDF remain excluded because they contain retired information. Product icons are not part of this kit.
+`Hero.otf` is intentionally absent from Git because no redistribution licence is provided, and `firebase.json` excludes `assets/fonts/Hero.*` from every deploy so a local copy can never be published; production headings use Poppins (a missing Hero file is a harmless 404 on the font request). Only use a separately licensed local copy when authorized. The old letterhead images and presentation PDF remain excluded because they contain retired information. Product icons are not part of this kit.
 
 ### Hosting
 
-`firebase.json` serves the repository directly. The configured Firebase project and Hosting site are `cave-brand-kit`; the custom domain is `brand.cave.technology`. Deployment requires separate owner approval. This documentation change does not deploy the website.
+`firebase.json` serves the repository directly. The configured Firebase project and Hosting site are `cave-brand-kit`; the custom domain is `brand.cave.technology`. Responses carry a Content-Security-Policy (scripts, fonts and images from this origin only; inline styles allowed for the few `style` attributes). Deployment requires separate owner approval. This documentation change does not deploy the website.
 
 </details>
 

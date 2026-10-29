@@ -1,3 +1,5 @@
+/* Brand-only: Hero is the display face when a licensed copy is present locally; it is never served in production, so headings fall back to Poppins. */
+:root{--font-display:"Hero","Poppins",system-ui,sans-serif}
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
