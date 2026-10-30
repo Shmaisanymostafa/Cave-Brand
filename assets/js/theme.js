@@ -10,9 +10,19 @@
   function valid(value) { return modes.indexOf(value) !== -1 ? value : 'system'; }
   try { choice = valid(localStorage.getItem(KEY)); } catch (e) {}
 
+  // The browser bar follows the page surface in Dark and Black, and stays brand navy in Light.
+  function syncBar(resolved) {
+    var bar = document.querySelector('meta[name="theme-color"]');
+    if (!bar) return;
+    if (!bar.hasAttribute('data-base')) bar.setAttribute('data-base', bar.getAttribute('content'));
+    var surface = resolved !== 'light' && window.getComputedStyle ? getComputedStyle(root).getPropertyValue('--surface').trim() : '';
+    bar.setAttribute('content', surface || bar.getAttribute('data-base'));
+  }
+
   function apply() {
     var resolved = choice === 'system' ? (media && media.matches ? 'dark' : 'light') : choice;
     root.setAttribute('data-theme', resolved);
+    syncBar(resolved);
     if (!picker) return;
     var current = picker.querySelector('input[value="' + choice + '"]');
     current.checked = true;
