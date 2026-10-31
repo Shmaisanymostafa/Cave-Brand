@@ -33,6 +33,7 @@ The official Cave logo, symbol, icons, patterns and colours, presented in a bili
 | --- | --- |
 | **Logos and symbol** | English and Arabic lockups, full-colour originals and white reversals |
 | **Icons and patterns** | Cave, layers and river icons; outline, layers and dots patterns |
+| **Desktop wallpapers** | Cave Horizon and Cave Flow, original 1916 × 821 PNGs (approximately 21:9), available in the site’s wallpaper section |
 | **Usage guidance** | Approved backgrounds, naming, colour values, typography and licensing |
 | **Bilingual website** | English at `/` and Arabic at `/ar/`; System, Light, Dark and Black appearance choices |
 
@@ -80,6 +81,8 @@ The theme picker stores `cave-brand-theme` locally and shares it across language
 Committed site tools provide approved background previews, transparent 1600px PNG export from the original SVG, and copy-colour controls with a manual fallback. Export preserves original proportions and omits the preview background. These source capabilities do not establish the currently deployed revision.
 
 ### Asset maintenance
+
+`assets/wallpapers/` contains the approved original Cave Horizon and Cave Flow PNGs. The English and Arabic wallpaper sections preview and download these same files without resizing or adding a logo. Both are 1916 × 821 pixels (approximately 21:9). They are website downloads, separate from the logo-and-pattern brand kit.
 
 Keep the supplied SVGs unchanged. When an authorized asset changes, rebuild the kit with the three asset folders and its existing licence text inside `cave-brand-kit/`. Fonts are not offered as part of the kit.
 
